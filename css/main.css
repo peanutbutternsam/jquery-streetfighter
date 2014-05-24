@@ -1,31 +1,52 @@
-* {
-  outline: red 1px solid;
-}
-
 body {
   background-color: black;
 }
 
+#sf-logo {
+    display:none;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:217px;
+    width: 432px;
+    float:left;
+}
+
 .main {
+  background-image: url('../images/sf-stage.png');
+  background-size: 100% 500px;
   background-color: white;
-  margin-top: 110px;
+  margin-top: 130px;
   padding-left: 100px;
   min-width: 1200px;
   height: 500px;
 }
 
 .ryu {
-	float:left;
+    float:left;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.warrior {
+    float:right;
+}
+
+.warrior-attack, .warrior-still, .warrior-ready {
+    width: 473px;
+    height:485px;
+}
+
+.ryu-cool, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-jump {
   width: 659px;
   height: 494px;
 }
 
-.ryu-ready, .ryu-throwing {
+.warrior-attack, .warrior-ready, .ryu-cool, .ryu-ready, .ryu-throwing, .ryu-jump {
   display: none;
 } 
+
+.warrior-attack, .warrior-ready, .warrior-still, .main, .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .ryu-jump {
+  background-repeat: no-repeat;
+}
 
 .ryu-ready {
   background-image: url('../images/ryu-ready-position.gif');
@@ -39,8 +60,27 @@ body {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
-  background-repeat: no-repeat;
+.ryu-cool {
+  background-image: url('../images/ryu-cool.gif');
+}
+
+.ryu-jump{
+    background-image: url('../images/ryu-jump.gif');
+}
+
+.warrior-still{
+    background-image: url('../images/warrior-still.png');
+    background-position: bottom;
+}
+
+.warrior-ready {
+    background-image: url('../images/warrior-ready.gif');
+    background-position: bottom;
+}
+
+.warrior-attack {
+    background-image: url('../images/warrior-attack.png');
+    background-position: bottom;
 }
 
 .hadouken {
@@ -52,6 +92,49 @@ body {
   top:167px;
   left: -212px;
   float: left;
+}
+
+
+.how-to-throw {
+    font-family:impact;
+    font-size: 30px;
+    width: 400px;
+    height: 400px;
+    color:black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position: absolute;
+    top:150px;
+    left:735px;
+    float:right;
+    display:block;
+}
+
+.how-to-cool {
+    font-family:impact;
+    font-size: 30px;
+    width: 400px;
+    height: 400px;
+    color:black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position:absolute;
+    top:275px;
+    left:735px;
+    float:right;
+    display:block;
+}
+
+.how-to-jump {
+    font-family:impact;
+    font-size: 30px;
+    width: 400px;
+    height: 400px;
+    color:black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position:absolute;
+    top:400px;
+    left:735px;
+    float:right;
+    display:block;
 }
 
 
