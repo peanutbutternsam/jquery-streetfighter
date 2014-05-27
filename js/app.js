@@ -3,12 +3,12 @@ $(document).ready(function(){
   });
 
 
-	var coolSound = false;
-	function playCool () {
-  	coolSound = !coolSound;
-  		if (coolSound) {
+	var poseSound = false;
+	function playPose () {
+  	poseSound = !poseSound;
+  		if (poseSound) {
     		//$('#theme-song')[0].pause();
-    		// $('#cool')[0].load()
+    		// $('#pose-sound')[0].load()
     		$('#pose-sound')[0].play();
   		}
 	}
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	$('body').keydown(function(event){
 		if(event.keyCode == 88){
-			playCool();
+			playPose();
 			$('.ryu-still').hide();
 			$('.ryu-ready').hide();
 			$('.ryu-throwing').hide();
@@ -38,6 +38,7 @@ $(document).ready(function(){
 
 	$('body').keydown(function(event){
 		if(event.keyCode == 74){
+			playHiya();
 			$('.ryu-still').hide();
 			$('.ryu-ready').hide();
 			$('.ryu-throwing').hide();
@@ -47,6 +48,8 @@ $(document).ready(function(){
 	})	
 	$('body').keyup(function(event){
 		if(event.keyCode == 74){
+			$('#hiya')[0].pause();
+      		$('#hiya')[0].load();
 			$('.ryu-jump').hide();
 			$('.ryu-cool').hide();
 			$('.ryu-ready').hide();
@@ -99,10 +102,10 @@ $(document).ready(function(){
 
 });
 
-function playTheme () {
-  $('#theme-song')[0].volume = 0.5;
-  $('#theme-song')[0].load();
-  $('#theme-song')[0].play();
+function playHiya () {
+  $('#hiya')[0].volume = 0.5;
+  $('#hiya')[0].load();
+  $('#hiya')[0].play();
 }
 
 
